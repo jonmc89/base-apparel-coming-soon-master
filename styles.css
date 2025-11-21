@@ -21,8 +21,35 @@ body {
     background: var(--gradient_1);
 }
 
+.main-container {
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    justify-items: center;
+    width: 100%;
+}
+
+@media screen and (min-width: 80em) {
+    .main-container {
+        display: grid;
+        grid-area: "header image" "text image";
+        grid-template-rows: 10% 90%;
+        grid-template-columns: 50% 50%;
+        overflow: hidden;
+    }
+}
+
 header {
+    display: flex;
+    justify-content: flex-start;
     padding: 2rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 80em) {
+    header {
+        padding: 7rem;
+    }
 }
 
 .hero-img-mobile {
@@ -31,11 +58,36 @@ header {
     width: 100%;
 }
 
+@media screen and (min-width: 51.25em) {
+    .hero-img-mobile {
+        margin-block-end: 4rem;
+    }
+}
+
+.hero-img-desktop {
+    display: none;
+}
+
+@media screen and (min-width: 80em) {
+    .hero-img-mobile {
+        display: none;
+    }
+
+    .hero-img-desktop {
+        display: block;
+        height: auto;
+        grid-column: 2;
+        grid-row: span 2;
+        width: 100%;
+    }
+}
+
 .text-container {
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-width: 70%;
 }
 
 span {
@@ -44,7 +96,7 @@ span {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: clamp(3rem, 5vw, 5rem);
     font-weight: 500;
     letter-spacing: 0.8rem;
     margin-block-end: 2rem;
@@ -53,6 +105,7 @@ h1 {
 
 p {
     color: var(--pink400);
+    font-size: clamp(1rem, 5vw, 1.2rem);
     line-height: 150%;
     margin-block-end: 2rem;
     padding: 0 2rem;
@@ -63,6 +116,22 @@ form {
     padding: 0 2rem;
     position: relative;
     width: 100%;
+}
+
+@media screen and (min-width: 80em) {
+    h1,
+    p {
+        text-align: left;
+    }
+
+    p {
+        padding: 0;
+    }
+
+    form {
+        padding: 0;
+        width: 100%;
+    }
 }
 
 input {
@@ -93,6 +162,13 @@ button {
     padding: 1.1rem;
     position: absolute;
     right: 1rem;
+    transform: translateX(clamp(-1rem, 5vw, 1rem));
     top: 0;
     width: 5rem;
+}
+
+@media screen and (min-width: 80em) {
+    button {
+        width: 6rem;
+    }
 }
