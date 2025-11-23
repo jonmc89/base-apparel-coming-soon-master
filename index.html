@@ -40,18 +40,32 @@
                     fashion store. Add your email below to stay up-to-date with
                     announcements and our launch deals.
                 </p>
-                <form action="">
-                    <input
-                        type="email"
-                        placeholder="Email Address"
-                        name="email"
-                        aria-label="email"
-                    />
-                    <button type="submit">
-                        <img src="./images/icon-arrow.svg" alt="" />
-                    </button>
-                </form>
+                <div class="form-container">
+                    <form id="form" action="" novalidate>
+                        <input
+                            id="emailInput"
+                            type="email"
+                            placeholder="Email Address"
+                            name="email"
+                            value="email"
+                            aria-label="email"
+                        />
+                        <img
+                            id="errorIcn"
+                            class="error-icn"
+                            src="./images/icon-error.svg"
+                            alt=""
+                        />
+                        <button type="submit">
+                            <img src="./images/icon-arrow.svg" alt="" />
+                        </button>
+                    </form>
+                    <p id="errorMessage" class="error-message">
+                        Please provide a valid email
+                    </p>
+                </div>
             </div>
         </main>
+        <script src="script.js"></script>
     </body>
 </html>

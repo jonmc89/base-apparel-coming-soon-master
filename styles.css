@@ -21,11 +21,18 @@ body {
     background: var(--gradient_1);
 }
 
+@media screen and (min-width: 80em) {
+    body {
+        overflow: hidden;
+    }
+}
+
 .main-container {
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     justify-items: center;
+
     width: 100%;
 }
 
@@ -88,6 +95,8 @@ header {
     flex-direction: column;
     justify-content: center;
     max-width: 70%;
+    padding: 2rem 0;
+    position: relative;
 }
 
 span {
@@ -113,9 +122,25 @@ p {
 }
 
 form {
-    padding: 0 2rem;
+    margin-block-end: 2rem;
     position: relative;
     width: 100%;
+}
+
+.form-container {
+    position: relative;
+    width: 100%;
+}
+
+.error-message {
+    background: transparent;
+    bottom: -2.5rem;
+    color: var(--red500);
+    display: none;
+    font-size: 1rem;
+    left: 1rem;
+    position: absolute;
+    z-index: 2;
 }
 
 @media screen and (min-width: 80em) {
@@ -139,6 +164,7 @@ input {
     border: 0.1rem solid rgb(216, 197, 197);
     border-radius: 2rem;
     font-size: 1rem;
+    margin-block-end: 1rem;
     padding: 1.2rem 2rem;
     transition: all 0.2s ease-in-out;
     width: 100%;
@@ -151,6 +177,18 @@ input::placeholder {
 input:focus {
     outline: var(--pink400);
     background-color: #fff;
+}
+
+.error-icn {
+    display: none;
+    position: absolute;
+    right: 8rem;
+    top: 1rem;
+    transform: translateX(clamp(2rem, 5vw, -8rem));
+}
+
+.input-error {
+    border: 0.1rem solid red;
 }
 
 button {
