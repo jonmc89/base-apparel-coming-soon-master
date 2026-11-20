@@ -1,0 +1,24 @@
+/* || Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --grey-900: #423a3a;
+  --red-400: #f96464;
+  --pink-400: #ce9898;
+  --gradient-1: linear-gradient(#f8bfbf, #ee8b8b);
+}
+
+/* || Main Styles */
+
+body {
+  font-style: normal;
+  font-family: 'Josefin Sans', sans-serif;
+  font-optical-sizing: auto;
+}
