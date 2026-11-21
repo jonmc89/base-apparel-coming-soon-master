@@ -36,10 +36,12 @@
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </p>
-        <form>
+        <form id="form" novalidate>
           <input
             aria-label="email"
             type="email"
+            id="email"
+            name="email"
             placeholder="Email Address"
             required
           />
@@ -47,6 +49,9 @@
             <img src="./images/icon-arrow.svg" alt="" />
           </button>
         </form>
+        <span id="error" class="error" aria-live="polite"
+          >Please provide a valid email</span
+        >
       </section>
     </main>
   </body>
