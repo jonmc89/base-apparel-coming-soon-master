@@ -13,6 +13,8 @@
   --red-400: #f96464;
   --pink-400: #ce9898;
   --gradient-1: linear-gradient(#f8bfbf, #ee8b8b);
+  --gradient-2: linear-gradient(#fff, #fff4f4);
+  --gradient-3: linear-gradient(#fff1f1, #fff);
 }
 
 /* || Main Styles */
@@ -21,4 +23,86 @@ body {
   font-style: normal;
   font-family: 'Josefin Sans', sans-serif;
   font-optical-sizing: auto;
+}
+
+main {
+  background: var(--gradient-2);
+  height: 100dvh;
+}
+
+.logo-wrapper {
+  padding: 2rem;
+}
+
+.image-wrapper {
+  margin-block-end: 4rem;
+  background-image: url(./images/hero-mobile.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 18rem;
+}
+
+.text-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2.5rem;
+  text-align: center;
+
+  span {
+    color: var(--pink-400);
+    font-weight: 300;
+    font-size: 2.5rem;
+    letter-spacing: 0.625rem;
+  }
+  h1 {
+    margin-block-end: 1rem;
+    color: var(--grey-900);
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: 0.625rem;
+    text-align: center;
+  }
+
+  p {
+    margin-block-end: 2rem;
+    color: var(--pink-400);
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 155%;
+  }
+
+  form {
+    position: relative;
+    width: 100%;
+  }
+  input::placeholder {
+    color: var(--pink-400);
+  }
+
+  input {
+    border: 0.0625rem solid var(--pink-400);
+    border-radius: 2rem;
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  button {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0rem 0.5rem 1rem var(--pink-400);
+    border: none;
+    border-radius: 1.75rem;
+    background: var(--gradient-1);
+    padding: 1rem 1.5rem;
+    width: 4rem;
+  }
 }
