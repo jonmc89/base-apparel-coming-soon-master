@@ -10,6 +10,8 @@ emailInputEl.addEventListener('input', (event) => {
     errorIconEl.classList.remove('show-error-icon');
     emailInputEl.classList.remove('input-error-outline');
     emailInputEl.setAttribute('aria-invalid', 'false');
+    errorEl.hidden = true;
+    errorIconEl.hidden = true;
   } else {
     showError();
   }
