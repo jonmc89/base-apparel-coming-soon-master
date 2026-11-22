@@ -4,10 +4,11 @@ const errorEl = document.getElementById('error');
 const errorIconEl = document.getElementById('errorIcon');
 
 emailInputEl.addEventListener('input', (event) => {
-  if (email.validity.valid) {
+  if (emailInputEl.validity.valid) {
     errorEl.textContent = '';
     errorEl.classList.remove('show-error');
     errorIconEl.classList.remove('show-error-icon');
+    emailInputEl.classList.remove('input-error-outline');
   } else {
     showError();
   }
