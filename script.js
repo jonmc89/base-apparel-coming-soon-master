@@ -9,6 +9,7 @@ emailInputEl.addEventListener('input', (event) => {
     errorEl.classList.remove('show-error');
     errorIconEl.classList.remove('show-error-icon');
     emailInputEl.classList.remove('input-error-outline');
+    emailInputEl.setAttribute('aria-invalid', 'false');
   } else {
     showError();
   }
@@ -27,7 +28,10 @@ function showError() {
   } else if (emailInputEl.validity.typeMismatch) {
     errorEl.textContent = 'Please provide a valid email';
   }
+  errorEl.hidden = false;
   errorEl.classList.add('show-error');
   errorIconEl.classList.add('show-error-icon');
+  errorIconEl.hidden = false;
   emailInputEl.classList.add('input-error-outline');
+  emailInputEl.setAttribute('aria-invalid', 'true');
 }

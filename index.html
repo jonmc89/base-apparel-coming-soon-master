@@ -40,6 +40,7 @@
           <input
             class="email-input"
             aria-label="email"
+            aria-describedby="error-icon error"
             type="email"
             id="email"
             name="email"
@@ -54,9 +55,10 @@
             class="error-icon"
             src="./images/icon-error.svg"
             alt=""
+            hidden
           />
         </form>
-        <span id="error" class="error" aria-live="polite"
+        <span id="error" class="error" aria-live="polite" hidden
           >Please provide a valid email</span
         >
       </section>
