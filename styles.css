@@ -85,7 +85,7 @@ main {
     color: var(--pink-400);
   }
 
-  input {
+  .email-input {
     margin-block-end: 1rem;
     border: 0.0625rem solid var(--pink-400);
     border-radius: 2rem;
@@ -95,12 +95,11 @@ main {
     font-size: 1rem;
   }
 
-  input:focus {
-    outline-color: var(--pink-400);
+  .input-error-outline {
+    border-color: var(--red-400);
   }
-
-  input:invalid {
-    outline-color: var(--red-400);
+  .email-input:focus {
+    outline-color: var(--pink-400);
   }
 
   button {
@@ -133,6 +132,19 @@ main {
   .show-error {
     opacity: 1;
   }
+}
+
+.error-icon {
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.show-error-icon {
+  opacity: 1;
 }
 
 /* || Media Queries */

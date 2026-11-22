@@ -1,11 +1,13 @@
 const formEl = document.getElementById('form');
 const emailInputEl = document.getElementById('email');
 const errorEl = document.getElementById('error');
+const errorIconEl = document.getElementById('errorIcon');
 
 emailInputEl.addEventListener('input', (event) => {
   if (email.validity.valid) {
     errorEl.textContent = '';
     errorEl.classList.remove('show-error');
+    errorIconEl.classList.remove('show-error-icon');
   } else {
     showError();
   }
@@ -25,4 +27,6 @@ function showError() {
     errorEl.textContent = 'Please provide a valid email';
   }
   errorEl.classList.add('show-error');
+  errorIconEl.classList.add('show-error-icon');
+  emailInputEl.classList.add('input-error-outline');
 }

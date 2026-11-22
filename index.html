@@ -38,6 +38,7 @@
         </p>
         <form id="form" novalidate>
           <input
+            class="email-input"
             aria-label="email"
             type="email"
             id="email"
@@ -48,6 +49,12 @@
           <button type="submit">
             <img src="./images/icon-arrow.svg" alt="" />
           </button>
+          <img
+            id="errorIcon"
+            class="error-icon"
+            src="./images/icon-error.svg"
+            alt=""
+          />
         </form>
         <span id="error" class="error" aria-live="polite"
           >Please provide a valid email</span
